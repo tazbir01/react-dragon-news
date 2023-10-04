@@ -13,7 +13,7 @@ const Home = () => {
                     <LeftSideNave></LeftSideNave>
                 </div>
                 <div className="border md:col-span-2">
-                    <p>Comming soon</p>
+                    <h2 className="text-xl font-semibold">Dragon News Home</h2>
                 </div>
                 <div className="border">
                     <RightSideNave></RightSideNave>
