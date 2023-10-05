@@ -21,7 +21,7 @@ const RightSideNave = () => {
             {/* social links */}
             <div className="p-3">
                 <h2 className="text-xl font-semibold mb-3">Find Us On</h2>
-                
+
                 <a href="" className="border-2 p-4 flex items-center rounded-t-lg">
                     <FaFacebook className="text-lg mr-2"></FaFacebook>
                     Facebook
@@ -43,7 +43,7 @@ const RightSideNave = () => {
                 <img src={qzoneImage3} alt="" />
             </div>
             {/* addvertise */}
-            <div className="flex-col items-center justify-center" style={{backgroundImage: `url(${bg})`}}>
+            <div className="flex-col items-center justify-center" style={{ backgroundImage: `url(${bg})` }}>
                 <h2 className="text-xl text-white font-bold">Create an Amazing Newspaper</h2>
                 <p className="text-white">Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
                 <button className="btn btn-secondary">Learn More</button>
