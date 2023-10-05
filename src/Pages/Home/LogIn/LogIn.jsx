@@ -1,19 +1,30 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Shared/Navbar/Navbar";
+import { useContext } from "react";
+import { authContext } from "../../../Provider/AuthProvider";
 
 
 const LogIn = () => {
+    const {loginUser} = useContext(authContext)
     const handleLogIn = e => {
         e.preventDefault()
         console.log(e.currentTarget)
         const form = new FormData(e.currentTarget)
         console.log(form.get('email'))
+        const email = form.get('email')
+        const password = form.get('password')
+
+        loginUser(email, password)
+        .then(result => {
+            console.log(result.user)
+        })
+        .catch(error => console.log(error.massege))
     }
     return (
         <div className="mb-5">
             <Navbar></Navbar>
 
-            <h1 className="text-5xl font-bold text-center mt-7">Login now!</h1>
+            <h1 className="text-3xl font-bold text-center mt-7">Login now!</h1>
             <div className=" w-1/2 mx-auto">
                 <form onSubmit={handleLogIn} className="card-body">
                     <div className="form-control">
